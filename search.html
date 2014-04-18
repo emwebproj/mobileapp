@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="public/css/jquery-mobile.min.css" />
 	<script src="public/js/jquery.min.js"></script>
 	<script src="public/js/jquery-mobile.min.js"></script>
+  <script src="public/js/search.js"></script>
 	
 	<link rel="stylesheet" href="public/css/main.css" />
 </head> 
@@ -21,20 +22,37 @@
 
   <div data-role="content">
     <form>
-      <input data-type="search" id="searchForCollapsibleSetChildren">
+        <input data-type="search" id="searchForCollapsibleSetChildren">
     </form>
-    <h3>Fiction Category</h3>
-    <ul data-role="listview" data-enhanced="true" data-filter="true" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
-      <li data-filtertext="Fiction 1 2 3" data-role="list-divider">Fiction</li>
-      <li data-filtertext="1"><a href="fiction.html" data-transition="pop"> Window 1 </a></li>
-      <li data-filtertext="2"><a href="fiction.html" data-transition="pop"> Window 2 </a></li>
-      <li data-filtertext="3"><a href="fiction.html" data-transition="pop"> Window 3 </a></li>
-      <li data-filtertext="Romance 4 5 6" data-role="list-divider">Romance</li>
-      <li data-filtertext="4"><a href="fiction.html" data-transition="pop"> Window 4 </a></li>
-      <li data-filtertext="5"><a href="fiction.html" data-transition="pop"> Window 5 </a></li>
-      <li data-filtertext="6"><a href="fiction.html" data-transition="pop"> Window 6 </a></li>
-    </ul>
-  </div>
+    <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+        <div id="FictionCat" data-role="collapsible" data-filtertext="Fiction Cats Dogs Lizards snakes">
+            <h3>Fiction</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Fiction Cats">Cats</li>
+                <li data-filtertext="Fiction Dogs">Dogs</li>
+                <li data-filtertext="Fiction Lizards">Lizards</li>
+                <li data-filtertext="Fiction Snakes">Snakes</li>
+            </ul>
+        </div>
+        <div id="Collapsibless" data-role="collapsible" data-filtertext="Romance Acura Audi BMW Cadillac">
+            <h3>Romance</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Romance Acura">Acura</li>
+                <li data-filtertext="Romance Audi">Audi</li>
+                <li data-filtertext="Romance BMW">BMW</li>
+                <li data-filtertext="Romance Cadillac">Cadillac</li>
+            </ul>
+        </div>
+        <div id="Collapsibless" data-role="collapsible" data-filtertext="Fantasy Earth Jupiter Mars Mercury">
+            <h3>Fantasy</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Fantasy Acura">Earth</li>
+                <li data-filtertext="Fantasy Jupiter">Jupiter</li>
+                <li data-filtertext="Fantasy Mars">Mars</li>
+                <li data-filtertext="Fantasy Mercury">Mercury</li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <div data-role="dialog" id="win1">

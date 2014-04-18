@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="public/css/jquery-mobile.min.css" />
 	<script src="public/js/jquery.min.js"></script>
 	<script src="public/js/jquery-mobile.min.js"></script>
+
+	<script src="public/js/search.js"></script>
 	
 	<link rel="stylesheet" href="public/css/main.css" />
 </head> 
@@ -21,40 +23,40 @@
 
 	<div data-role="content">
 		<h3> Popular Categories </h3>
-		<div class="ui-grid-b ui-responsive" id="PopularCategories">
+		<div class="ui-grid-b ui-responsive" id="PopularCategories" >
 			<div class="ui-block-a">
-				<a href="fiction.html" data-transition="slide">
-					<img src="images/book1.jpg">
+				<a href="#search" cat="fiction" data-transition="slide">
+					<img src="images/book1.jpg" />
 					<div>Fiction</div>
 				</a>
 			</div>
 			<div class="ui-block-b">
-				<a href="fiction.html">
-					<img src="images/book2.jpg">
+				<a href="search.html?cat=fantasy">
+					<img src="images/book2.jpg" />
 					<div>Fantasy</div>
 				</a>
 			</div>
 			<div class="ui-block-c">
-				<a href="fiction.html">
-					<img src="images/book3.jpg">
+				<a href="search.html?cat=sci-fi">
+					<img src="images/book3.jpg" />
 					<div>Sci-Fi</div>
 				</a>
 			</div>
 			<div class="ui-block-a">
-				<a href="fiction.html">
-					<img src="images/book4.jpg">
+				<a href="search.html?cat=politicsandgovernment">
+					<img src="images/book4.jpg" />
 					<div>Politics and Government</div>
 				</a>
 			</div>
 			<div class="ui-block-b">
-				<a href="fiction.html">
-					<img src="images/book5.jpg">
+				<a href="search.html?cat=romance">
+					<img src="images/book5.jpg" />
 					<div>Romance</div>
 				</a>
 			</div>
 			<div class="ui-block-c">
-				<a href="fiction.html">
-					<img src="images/book6.jpg">
+				<a href="search.html?cat=cultureandarts">
+					<img src="images/book6.jpg" />
 					<div>Culture and arts</div>
 				</a>
 			</div>
@@ -63,12 +65,60 @@
 
 	<div id="Footer" data-role="footer" data-position="fixed">
 		<div data-role="controlgroup" data-type="horizontal" data-theme="b">
-			<a href="search.html" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left" data-transition="slide">Search</a>
+			<a href="#search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left" data-transition="slide">Search</a>
 			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Account</a>
 			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-location ui-btn-icon-left">Store</a>
 		</div>
 	</div>
 
+</div>
+
+<div data-role="page" id="search">
+  <div data-role="header">
+    <h1>Home</h1>
+  </div>
+
+  <div data-role="content">
+    <form>
+        <input data-type="search" id="searchForCollapsibleSetChildren">
+    </form>
+    <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+        <div id="Collapsible" data-role="collapsible" data-filtertext="Fiction Cats Dogs Lizards snakes">
+            <h3>Fiction</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Fiction Cats">Cats</li>
+                <li data-filtertext="Fiction Dogs">Dogs</li>
+                <li data-filtertext="Fiction Lizards">Lizards</li>
+                <li data-filtertext="Fiction Snakes">Snakes</li>
+            </ul>
+        </div>
+        <div id="Collapsible" data-role="collapsible" data-filtertext="Romance Acura Audi BMW Cadillac">
+            <h3>Romance</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Romance Acura">Acura</li>
+                <li data-filtertext="Romance Audi">Audi</li>
+                <li data-filtertext="Romance BMW">BMW</li>
+                <li data-filtertext="Romance Cadillac">Cadillac</li>
+            </ul>
+        </div>
+        <div id="Collapsible" data-role="collapsible" data-filtertext="Fantasy Earth Jupiter Mars Mercury">
+            <h3>Fantasy</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Fantasy Acura">Earth</li>
+                <li data-filtertext="Fantasy Jupiter">Jupiter</li>
+                <li data-filtertext="Fantasy Mars">Mars</li>
+                <li data-filtertext="Fantasy Mercury">Mercury</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="Footer" data-role="footer" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal" data-theme="b">
+			<a href="#search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left" data-transition="slide">Search</a>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Account</a>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-location ui-btn-icon-left">Store</a>
+		</div>
+	</div>
 </div>
 
 </body>
