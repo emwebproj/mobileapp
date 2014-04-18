@@ -1,0 +1,13 @@
+#PopularCategories .ui-block-a, #PopularCategories .ui-block-b, #PopularCategories .ui-block-c {
+	background-color: #e9e9e9;
+	border: 1px #ddd solid;
+	margin: 0 5px;
+	margin-bottom: 20px;
+	text-align : center;
+	width: 32.333%;
+}
+
+#PopularCategories img {
+	height: 250px;
+	width: 80%
+}
