@@ -14,29 +14,28 @@
 
 <body> 
 
-<div data-role=page id=home>
-  <div data-role=header>
+<div data-role="page" id="home">
+  <div data-role="header">
     <h1>Home</h1>
   </div>
 
-  <div data-role=content>
+  <div data-role="content">
     <h3>Fiction Category</h3>
-    <ul data-role=listview>
-      <li data-role=list-divider>Fiction</li>
-      <li><a href=#win1> Window 1 </a></li>
+    <ul data-role="listview">
+      <li data-role="list-divider">Fiction</li>
+      <li><a href="#win1" data-transition="pop"> Window 1 </a></li>
     </ul>
   </div>
 </div>
 
-<div data-role=page id=win1>
-  <div data-role=header data-add-back-btn=true>
+<div data-role="dialog" id="win1">
+  <div data-role="header" data-add-back-btn="true">
     <h1>Description</h1>
   </div>
 
-  <div data-role=content>
+  <div data-role="content">
     <p> The most awaited story ever</p>
   </div>
 </div>
-<!--<a href="#win1" data-icon="delete">Cancel</a>-->
 </body>
 </html>

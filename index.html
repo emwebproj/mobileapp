@@ -14,43 +14,62 @@
 
 <body> 
 
-<div data-role=page id=home>
-	<div data-role=header>
+<div data-role="page" id="home">
+	<div data-role="header" data-theme="b">
 		<h1>My Book Store</h1>
 	</div>
 
-	<div data-role=content>
+	<div data-role="content">
 		<h3> Popular Categories </h3>
-		<div class=ui-grid-b id=PopularCategories>
-			<div class=ui-block-a>
-				<a href=fiction.html>
-					<img src=images/book1.jpg>
+		<div class="ui-grid-b ui-responsive" id="PopularCategories">
+			<div class="ui-block-a">
+				<a href="fiction.html" data-transition="slide">
+					<img src="images/book1.jpg">
 					<div>Fiction</div>
 				</a>
 			</div>
-			<div class=ui-block-b>
-				<img src=images/book2.jpg>
-				<div>Fantasy</div>
+			<div class="ui-block-b">
+				<a href="fiction.html">
+					<img src="images/book2.jpg">
+					<div>Fantasy</div>
+				</a>
 			</div>
-			<div class=ui-block-c>
-				<img src=images/book3.jpg>
-				<div>Sci-Fi</div>
+			<div class="ui-block-c">
+				<a href="fiction.html">
+					<img src="images/book3.jpg">
+					<div>Sci-Fi</div>
+				</a>
 			</div>
-			<div class=ui-block-a>
-				<img src=images/book4.jpg>
-				<div>Politics and Government</div>
+			<div class="ui-block-a">
+				<a href="fiction.html">
+					<img src="images/book4.jpg">
+					<div>Politics and Government</div>
+				</a>
 			</div>
-			<div class=ui-block-b>
-				<img src=images/book5.jpg>
-				<div>Romance</div>
+			<div class="ui-block-b">
+				<a href="fiction.html">
+					<img src="images/book5.jpg">
+					<div>Romance</div>
+				</a>
 			</div>
-			<div class=ui-block-c>
-				<img src=images/book6.jpg>
-				<div>Culture and arts</div>
+			<div class="ui-block-c">
+				<a href="fiction.html">
+					<img src="images/book6.jpg">
+					<div>Culture and arts</div>
+				</a>
 			</div>
 		</div>
 	</div>
+
+	<div id="Footer" data-role="footer" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal" data-theme="b">
+			<a href="search.html" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left" data-transition="slide">Search</a>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Account</a>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-location ui-btn-icon-left">Store</a>
+		</div>
+	</div>
+
 </div>
-<!--<a href="#win1" data-icon="delete">Cancel</a>-->
+
 </body>
 </html>
