@@ -15,143 +15,204 @@
 </head> 
 
 <body> 
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b" id="Header" data-position="fixed">
+			<h1>My Book Store</h1>
+			<a href="index.html" data-icon="home" data-iconpos="notext" data-transition="slide">Home</a>
+		</div>
 
-<div data-role="page" id="home">
-	<div data-role="header" data-theme="b" id="Header" data-position="fixed">
-		<h1>My Book Store</h1>
-		<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
-	</div>
-
-	<div data-role="content">
-		<h3> Popular Categories </h3>
-		<div class="ui-grid-b ui-responsive" id="PopularCategories" >
-			<div class="ui-block-a">
-				<a href="#search" cat="fiction" data-transition="slide">
-					<img src="images/book1.jpg" />
-					<div>Fiction</div>
-				</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="search.html?cat=fantasy">
-					<img src="images/book2.jpg" />
-					<div>Fantasy</div>
-				</a>
-			</div>
-			<div class="ui-block-c">
-				<a href="search.html?cat=sci-fi">
-					<img src="images/book3.jpg" />
-					<div>Sci-Fi</div>
-				</a>
-			</div>
-			<div class="ui-block-a">
-				<a href="search.html?cat=politicsandgovernment">
-					<img src="images/book4.jpg" />
-					<div>Politics and Government</div>
-				</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="search.html?cat=romance">
-					<img src="images/book5.jpg" />
-					<div>Romance</div>
-				</a>
-			</div>
-			<div class="ui-block-c">
-				<a href="search.html?cat=cultureandarts">
-					<img src="images/book6.jpg" />
-					<div>Culture and arts</div>
-				</a>
+		<div data-role="content">
+			<h3> Popular Categories </h3>
+			<div class="ui-grid-b ui-responsive" id="PopularCategories" >
+				<div class="ui-block-a">
+					<a href="#search" cat="fiction" data-transition="slide">
+						<img src="images/book1.jpg" />
+						<div>Fiction</div>
+					</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#search" cat="fantasy" data-transition="slide">
+						<img src="images/book2.jpg" />
+						<div>Fantasy</div>
+					</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="#search" cat="sci-fi" data-transition="slide">
+						<img src="images/book3.jpg" />
+						<div>Sci-Fi</div>
+					</a>
+				</div>
+				<div class="ui-block-a">
+					<a href="#search" cat="politics and government" data-transition="slide">
+						<img src="images/book4.jpg" />
+						<div>Politics and Government</div>
+					</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#search" cat="romance" data-transition="slide">
+						<img src="images/book5.jpg" />
+						<div>Romance</div>
+					</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="#search" cat="culture and arts" data-transition="slide">
+						<img src="images/book6.jpg" />
+						<div>Culture and Arts</div>
+					</a>
+				</div>
 			</div>
 		</div>
+
+		<div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
+			<div id="navbar" data-role="navbar" data-iconpos="left">
+					<ul>
+						<li><a href="#search" data-icon="search" data-transition="slide">Search</a></li>
+						<li><a href="#login" data-icon="user" data-transition="slide">Account</a></li>
+						<li><a href="#search" data-icon="location" data-transition="slide">Store</a></li>
+					</ul>
+				</div>
+		</div>
+
 	</div>
 
-	<div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
-		<div id="navbar" data-role="navbar" data-iconpos="left">
-				<ul>
-					<li><a href="#search" data-icon="search">Search</a></li>
-					<li><a href="#login" data-icon="user">Account</a></li>
-					<li><a href="#search" data-icon="location">Store</a></li>
-				</ul>
-			</div>
-	</div>
+	<div data-role="page" id="search">
+	  	<div data-role="header" data-theme="b" id="Header" data-position="fixed">
+			<h1>My Book Store</h1>
+			<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
+		</div>
 
-</div>
+		<div data-role="content">
+			<form>
+		        <input data-type="search" id="searchForCollapsibleSetChildren" placeholder="Search by Category or by Book Title">
+		    </form>
+			<ul data-role="listview" data-inset="true" data-filter="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
 
-<div data-role="page" id="search">
-  <div data-role="header" data-theme="b" id="Header" data-position="fixed">
-		<h1>My Book Store</h1>
-		<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
-	</div>
+				<li class="listdivider" data-role="list-divider" data-filtertext="Fiction Cats Dogs Lizards snakes"><h1>Fiction</h1></li>
+				<li data-filtertext="Fiction Cats">
+					<a href="#">
+						<img src="images/book1.jpg">
+						<h2>Cats</h2>
+						<p>This is cat</p>
+					</a>
+				</li>
+				<li data-filtertext="Fiction Dogs">
+					<a href="#">
+						<img src="images/book2.jpg">
+						<h2>Dogs</h2>
+						<p>This is a dog</p>
+					</a>
+				</li>
+				<li data-filtertext="Fiction Lizards">
+					<a href="#">
+						<img src="images/book3.jpg">
+						<h2>Lizards</h2>
+						<p>This is lizard</p>
+					</a>
+				</li>
+				<li data-filtertext="Fiction Snakes">
+					<a href="#">
+						<img src="images/book4.jpg">
+						<h2>Snakes</h2>
+						<p>This is a snake</p>
+					</a>
+				</li>
 
-  <div data-role="content">
-    <form>
-        <input data-type="search" id="searchForCollapsibleSetChildren" placeholder="Search by Category or by Book Title">
-    </form>
-    <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
-        <div id="Collapsible" data-role="collapsible" data-filtertext="Fiction Cats Dogs Lizards snakes">
-            <h3>Fiction</h3>
-            <ul data-role="listview" data-inset="false">
-                <li data-filtertext="Fiction Cats">Cats</li>
-                <li data-filtertext="Fiction Dogs">Dogs</li>
-                <li data-filtertext="Fiction Lizards">Lizards</li>
-                <li data-filtertext="Fiction Snakes">Snakes</li>
-            </ul>
-        </div>
-        <div id="Collapsible" data-role="collapsible" data-filtertext="Romance Acura Audi BMW Cadillac">
-            <h3>Romance</h3>
-            <ul data-role="listview" data-inset="false">
-                <li data-filtertext="Romance Acura">Acura</li>
-                <li data-filtertext="Romance Audi">Audi</li>
-                <li data-filtertext="Romance BMW">BMW</li>
-                <li data-filtertext="Romance Cadillac">Cadillac</li>
-            </ul>
-        </div>
-        <div id="Collapsible" data-role="collapsible" data-filtertext="Fantasy Earth Jupiter Mars Mercury">
-            <h3>Fantasy</h3>
-            <ul data-role="listview" data-inset="false">
-                <li data-filtertext="Fantasy Earth">Earth</li>
-                <li data-filtertext="Fantasy Jupiter">Jupiter</li>
-                <li data-filtertext="Fantasy Mars">Mars</li>
-                <li data-filtertext="Fantasy Mercury">Mercury</li>
-            </ul>
-        </div>
-    </div>
-  </div>
+				<li class="listdivider" data-role="list-divider" data-filtertext="Romance Acura Audi BMW Cadillac"><h1>Romance</h1></li>
+				<li data-filtertext="Romance Acura">
+					<a href="#">
+						<img src="images/book1.jpg">
+						<h2>Acura</h2>
+						<p>This is Acura</p>
+					</a>
+				</li>
+				<li data-filtertext="Romance Audi">
+					<a href="#">
+						<img src="images/book2.jpg">
+						<h2>Audi</h2>
+						<p>This is Audi</p>
+					</a>
+				</li>
+				<li data-filtertext="Romance BMW">
+					<a href="#">
+						<img src="images/book3.jpg">
+						<h2>BMW</h2>
+						<p>This is BMW</p>
+					</a>
+				</li>
+				<li data-filtertext="Romance Cadillac">
+					<a href="#">
+						<img src="images/book4.jpg">
+						<h2>Cadillac</h2>
+						<p>This is Cadillac</p>
+					</a>
+				</li>
 
-  <div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
-		<div id="navbar" data-role="navbar" data-iconpos="left">
-			<ul>
-				<li><a href="#search" data-icon="search">Search</a></li>
-				<li><a href="#login" data-icon="user">Account</a></li>
-				<li><a href="#search" data-icon="location">Store</a></li>
+				<li class="listdivider" data-role="list-divider" data-filtertext="Fantasy Earth Jupiter Mars Mercury"><h1>Fantasy</h1></li>
+				<li data-filtertext="Fantasy Earth">
+					<a href="#">
+						<img src="images/book1.jpg">
+						<h2>Earth</h2>
+						<p>This is Earth</p>
+					</a>
+				</li>
+				<li data-filtertext="Fantasy Audi">
+					<a href="#">
+						<img src="images/book2.jpg">
+						<h2>Jupiter</h2>
+						<p>This is Jupiter</p>
+					</a>
+				</li>
+				<li data-filtertext="Fantasy Mars">
+					<a href="#">
+						<img src="images/book3.jpg">
+						<h2>Mars</h2>
+						<p>This is Mars</p>
+					</a>
+				</li>
+				<li data-filtertext="Fantasy Mercury">
+					<a href="#">
+						<img src="images/book4.jpg">
+						<h2>Mercury</h2>
+						<p>This is Mercury</p>
+					</a>
+				</li>
 			</ul>
 		</div>
-	</div>
-</div>
 
-<div data-role="page" id="login">
-	<div data-role="header" data-theme="b" id="Header" data-position="fixed">
-		<h1>My Book Store</h1>
-		<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
-	</div>
-
-	<div data-role="content">
-		<form>
-			<input type="text" name="username" id="username" placeholder="username">
-			<input type="text" name="password" id="password" placeholder="password">
-			<input type="submit" value="Login" data-theme="a">
-		</form>
-	</div>
-
-	<div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
-		<div id="navbar" data-role="navbar" data-iconpos="left">
+		<div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
+			<div id="navbar" data-role="navbar" data-iconpos="left">
 				<ul>
-					<li><a href="#search" data-icon="search">Search</a></li>
-					<li><a href="#login" data-icon="user">Account</a></li>
-					<li><a href="#search" data-icon="location">Store</a></li>
+					<li><a href="#search" data-icon="search" data-transition="slide">Search</a></li>
+					<li><a href="#login" data-icon="user" data-transition="slide">Account</a></li>
+					<li><a href="#search" data-icon="location" data-transition="slide">Store</a></li>
 				</ul>
 			</div>
+		</div>
 	</div>
-</div>
 
+	<div data-role="page" id="login">
+		<div data-role="header" data-theme="b" id="Header" data-position="fixed">
+			<h1>My Book Store</h1>
+			<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
+		</div>
+
+		<div data-role="content">
+			<form>
+				<input type="text" name="username" id="username" placeholder="username">
+				<input type="text" name="password" id="password" placeholder="password">
+				<input type="submit" id="submit" value="Login" data-theme="b">
+			</form>
+		</div>
+
+		<div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
+			<div id="navbar" data-role="navbar" data-iconpos="left">
+					<ul>
+						<li><a href="#search" data-icon="search" data-transition="slide">Search</a></li>
+						<li><a href="#login" data-icon="user" data-transition="slide">Account</a></li>
+						<li><a href="#search" data-icon="location" data-transition="slide">Store</a></li>
+					</ul>
+				</div>
+		</div>
+	</div>
 </body>
 </html>

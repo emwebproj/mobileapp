@@ -1,34 +1,15 @@
-$( document ).on( "pagecreate", function() {
+$( document ).ready( function() {
 
 	$('#PopularCategories a').click(function(){
 
 			var category = $(this).attr("cat");
 
 			if (category != "") {
-				filterbycat(category);
+
+				var filterer = $("#searchForCollapsibleSetChildren");
+
+			    filterer.val(category);
+			    filterer.trigger("change");
 			}
 	});
-
-	function filterbycat(cat) {
-		
-		var filterer = $("#searchForCollapsibleSetChildren");
-
-    filterer.val(cat);
-    filterer.trigger("change");
-	}
-
-	function expandcollapsables() {
-
-		var collapsible = $("#Collapsibles");
-
-		collapsible.each(function() {
-	        var coll = $(this);
-	        coll.trigger('expand');
-	    });
-	}
-
-});
-
-$( document ).bind( "mobileinit", function(){
-    $.mobile.collapsible.prototype.options.collapsed = false;
 });

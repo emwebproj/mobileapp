@@ -1,6 +1,6 @@
 #Header {
 	background-color: #CCE381;
-	border-color: #7B8C43
+	border-color: #7B8C43;
 }
 
 #Header a, #Footer ul li a {
@@ -25,6 +25,14 @@
 	float: left;
 	width: 33.333%;
 } 
+
+#login .ui-input-btn {
+	background-color: #82A11F;
+} 
+
+#search .listdivider {
+	background-color: #CCE381;
+}
 
 @media all and (max-width: 36em){
 	#PopularCategories .ui-block-a, #PopularCategories .ui-block-b, #PopularCategories .ui-block-c {
