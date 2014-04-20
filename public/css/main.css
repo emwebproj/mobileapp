@@ -1,3 +1,12 @@
+#Header {
+	background-color: #CCE381;
+	border-color: #7B8C43
+}
+
+#Header a, #Footer ul li a {
+	background-color: #82A11F;
+}
+
 #Footer {
 	text-align: center;
 }
@@ -9,5 +18,10 @@
 
 #PopularCategories img {
 	height: 250px;
-	width: 80%
+	width: 80%;
 }
+
+#PopularCategories .ui-block-a, #PopularCategories .ui-block-b, #PopularCategories .ui-block-c {
+	float: left;
+	width: 33.333%;
+} 

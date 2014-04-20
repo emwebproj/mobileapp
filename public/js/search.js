@@ -1,16 +1,20 @@
 $( document ).on( "pagecreate", function() {
-$.mobile.collapsible.prototype.options.collapsed = false;
-	//expandcollapsables();
-	//$('#FictionCat').collapsible( "expand" );
 
-	function filterbycat() {
+	$('#PopularCategories a').click(function(){
+
+			var category = $(this).attr("cat");
+
+			if (category != "") {
+				filterbycat(category);
+			}
+	});
+
+	function filterbycat(cat) {
 		
 		var filterer = $("#searchForCollapsibleSetChildren");
-	    var filter_val = filterer.val();
-	    var filter_query = filter_val+category;
 
-	    filterer.val(filter_query);
-	    filterer.trigger("change");
+    filterer.val(cat);
+    filterer.trigger("change");
 	}
 
 	function expandcollapsables() {
@@ -22,15 +26,6 @@ $.mobile.collapsible.prototype.options.collapsed = false;
 	        coll.trigger('expand');
 	    });
 	}
-
-	$('#PopularCategories a').click(function(){
-
-			category = $(this).attr("cat");
-
-			if (category != "") {
-				filterbycat();
-			}
-	});
 
 });
 

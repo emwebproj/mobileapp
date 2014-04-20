@@ -17,8 +17,9 @@
 <body> 
 
 <div data-role="page" id="home">
-	<div data-role="header" data-theme="b">
+	<div data-role="header" data-theme="b" id="Header" data-position="fixed">
 		<h1>My Book Store</h1>
+		<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
 	</div>
 
 	<div data-role="content">
@@ -63,20 +64,23 @@
 		</div>
 	</div>
 
-	<div id="Footer" data-role="footer" data-position="fixed">
-		<div data-role="controlgroup" data-type="horizontal" data-theme="b">
-			<a href="#search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left" data-transition="slide">Search</a>
-			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Account</a>
-			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-location ui-btn-icon-left">Store</a>
-		</div>
+	<div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
+		<div id="navbar" data-role="navbar" data-iconpos="left">
+				<ul>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#search" data-icon="user">Account</a></li>
+					<li><a href="#search" data-icon="location">Store</a></li>
+				</ul>
+			</div>
 	</div>
 
 </div>
 
 <div data-role="page" id="search">
-  <div data-role="header">
-    <h1>Home</h1>
-  </div>
+  <div data-role="header" data-theme="b" id="Header" data-position="fixed">
+		<h1>My Book Store</h1>
+		<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
 
   <div data-role="content">
     <form>
@@ -104,7 +108,7 @@
         <div id="Collapsible" data-role="collapsible" data-filtertext="Fantasy Earth Jupiter Mars Mercury">
             <h3>Fantasy</h3>
             <ul data-role="listview" data-inset="false">
-                <li data-filtertext="Fantasy Acura">Earth</li>
+                <li data-filtertext="Fantasy Earth">Earth</li>
                 <li data-filtertext="Fantasy Jupiter">Jupiter</li>
                 <li data-filtertext="Fantasy Mars">Mars</li>
                 <li data-filtertext="Fantasy Mercury">Mercury</li>
@@ -112,13 +116,16 @@
         </div>
     </div>
 
-    <div id="Footer" data-role="footer" data-position="fixed">
-		<div data-role="controlgroup" data-type="horizontal" data-theme="b">
-			<a href="#search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left" data-transition="slide">Search</a>
-			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Account</a>
-			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-location ui-btn-icon-left">Store</a>
+    <div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
+		<div id="navbar" data-role="navbar" data-iconpos="left">
+				<ul>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#search" data-icon="user">Account</a></li>
+					<li><a href="#search" data-icon="location">Store</a></li>
+				</ul>
+			</div>
 		</div>
-	</div>
+
 </div>
 
 </body>
