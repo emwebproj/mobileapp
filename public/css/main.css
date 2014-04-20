@@ -25,3 +25,11 @@
 	float: left;
 	width: 33.333%;
 } 
+
+@media all and (max-width: 36em){
+	#PopularCategories .ui-block-a, #PopularCategories .ui-block-b, #PopularCategories .ui-block-c {
+		clear: none;
+		float: left;
+		width: 50%;
+	} 
+}

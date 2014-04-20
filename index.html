@@ -68,7 +68,7 @@
 		<div id="navbar" data-role="navbar" data-iconpos="left">
 				<ul>
 					<li><a href="#search" data-icon="search">Search</a></li>
-					<li><a href="#search" data-icon="user">Account</a></li>
+					<li><a href="#login" data-icon="user">Account</a></li>
 					<li><a href="#search" data-icon="location">Store</a></li>
 				</ul>
 			</div>
@@ -84,7 +84,7 @@
 
   <div data-role="content">
     <form>
-        <input data-type="search" id="searchForCollapsibleSetChildren">
+        <input data-type="search" id="searchForCollapsibleSetChildren" placeholder="Search by Category or by Book Title">
     </form>
     <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
         <div id="Collapsible" data-role="collapsible" data-filtertext="Fiction Cats Dogs Lizards snakes">
@@ -115,17 +115,42 @@
             </ul>
         </div>
     </div>
+  </div>
 
-    <div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
+  <div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
+		<div id="navbar" data-role="navbar" data-iconpos="left">
+			<ul>
+				<li><a href="#search" data-icon="search">Search</a></li>
+				<li><a href="#login" data-icon="user">Account</a></li>
+				<li><a href="#search" data-icon="location">Store</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div data-role="page" id="login">
+	<div data-role="header" data-theme="b" id="Header" data-position="fixed">
+		<h1>My Book Store</h1>
+		<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+
+	<div data-role="content">
+		<form>
+			<input type="text" name="username" id="username" placeholder="username">
+			<input type="text" name="password" id="password" placeholder="password">
+			<input type="submit" value="Login" data-theme="a">
+		</form>
+	</div>
+
+	<div id="Footer" data-role="footer" data-position="fixed" data-theme="b">
 		<div id="navbar" data-role="navbar" data-iconpos="left">
 				<ul>
 					<li><a href="#search" data-icon="search">Search</a></li>
-					<li><a href="#search" data-icon="user">Account</a></li>
+					<li><a href="#login" data-icon="user">Account</a></li>
 					<li><a href="#search" data-icon="location">Store</a></li>
 				</ul>
 			</div>
-		</div>
-
+	</div>
 </div>
 
 </body>
